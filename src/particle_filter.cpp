@@ -136,7 +136,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
         if (landmark_part_dist <= sensor_range) {
           landmark_obs_dist[k] = dist(trans_obs_x, trans_obs_y, landmarks[k].x_f, landmarks[k].y_f);
         } else {
-          landmark_obs_dist[k] = INT_MAX;
+          landmark_obs_dist[k] = 99999999.0;
         }
       }
       
